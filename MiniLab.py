@@ -73,6 +73,7 @@ class MiniLab(ArturiaControlSurface):
 
     def _create_mixer(self):
         # selected_track_arm_control and selected_track_mute_control added to the constructor layer parameter
+        # set_selected_track_arm_control and set_selected_mute_control are defined in _Arturia.MixerComponent and called by _Framework.Layer.set_control_element
         self._mixer = MixerComponent(name='Mixer', is_enabled=False, num_returns=2, layer=Layer(track_select_encoder=self._horizontal_scroll_encoder, selected_track_volume_control=self._volume_encoder, selected_track_pan_control=self._pan_encoder, selected_track_send_controls=self._send_encoders, return_volume_controls=self._return_encoders, selected_track_arm_control=self._arm_button, selected_track_mute_control=self._mute_button))
         self._mixer.set_enabled(True)
 
