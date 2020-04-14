@@ -21,11 +21,11 @@ class MixerComponent(MixerComponentBase):
     def set_selected_track_volume_control(self, control):
         self.selected_strip().set_volume_control(control)
 
-    # this is linked from the constructor in Minilab.py
+    # this is linked from the constructor in Minilab._create_mixer
     def set_selected_track_arm_control(self, button):
         self.selected_strip().set_arm_button(button)        
 
-    # this is linked from the constructor in Minilab.py
+    # this is linked from the constructor in Minilab._create_mixer
     def set_selected_track_mute_control(self, button):
         self.selected_strip().set_mute_button(button)        
 
